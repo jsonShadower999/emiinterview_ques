@@ -8,9 +8,11 @@ class Enroller(models.Model):
    mobile=models.CharField(max_length=50)
    email=models.CharField(max_length=50)
    
+   adhar_card = models.FileField(upload_to='calculator/upload_file/adhar/')
+   pan_card = models.FileField(upload_to='calculator/upload_file/pan')
 
-   adhar_card=models.FileField()
-   pan_card=models.FileField()
+   # adhar_card=models.FileField()
+   # pan_card=models.FileField()
    loan_amount=models.IntegerField()
    tenure=models.IntegerField() 
    intrest_rate=models.DecimalField(max_digits=7,decimal_places=2) 
