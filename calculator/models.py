@@ -11,11 +11,16 @@ class Enroller(models.Model):
    adhar_card = models.FileField(upload_to='calculator/upload_file/adhar/')
    pan_card = models.FileField(upload_to='calculator/upload_file/pan')
 
+
    # adhar_card=models.FileField()
    # pan_card=models.FileField()
    loan_amount=models.IntegerField()
    tenure=models.IntegerField() 
    intrest_rate=models.DecimalField(max_digits=7,decimal_places=2) 
+   city=models.TextField(max_length=140,default="Chandigarh",null=True)
+   country=models.CharField(max_length=25,default="India",null=True)
+   post_office_name=models.CharField(max_length=350,default="No Office",null=True)
+
 
 
 
